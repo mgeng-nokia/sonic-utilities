@@ -42,11 +42,15 @@ def _parse_port_config(hwsku_dir):
                 continue
             parts = line.split()
             name = parts[0]
+            if not name.startswith('Ethernet'):
+                continue
             index = None
             for idx, part in enumerate(parts):
                 if part == 'index' and idx + 1 < len(parts):
                     index = int(parts[idx + 1])
                     break
+            if index is None and len(parts) >= 4 and parts[3].isdigit():
+                index = int(parts[3])
             if index is not None:
                 ports.append((index, name))
     ports.sort(key=lambda item: item[0])

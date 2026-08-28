@@ -235,9 +235,10 @@ setup(
             'rexec = rcli.rexec:cli',
             'rshell = rcli.rshell:cli',
             'show = show.main:cli',
-            'ptp1step = ptp_brcm.main:ptp1step',
-            'get_ptp_state = ptp_brcm.main:get_ptp_state_cmd',
-            'getCounter = ptp_brcm.main:get_counter_cmd',
+            'ptp-1step = ptp_brcm.main:ptp_1step_cmd',
+            'ptp-get-state = ptp_brcm.main:ptp_get_state_cmd',
+            'ptp-get-counter = ptp_brcm.main:ptp_get_counter_cmd',
+            'ptp-fw-status = ptp_brcm.main:ptp_fw_status_cmd',
             'sonic-clear = clear.main:cli',
             'sonic-installer = sonic_installer.main:sonic_installer',
             'sonic_installer = sonic_installer.main:sonic_installer',  # Deprecated
