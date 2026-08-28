@@ -65,6 +65,7 @@ setup(
         'ssd_erase',
         'ssdutil',
         'pfc',
+        'ptp_brcm',
         'psuutil',
         'flow_counter_util',
         'fdbutil',
@@ -234,6 +235,9 @@ setup(
             'rexec = rcli.rexec:cli',
             'rshell = rcli.rshell:cli',
             'show = show.main:cli',
+            'ptp1step = ptp_brcm.main:ptp1step',
+            'get_ptp_state = ptp_brcm.main:get_ptp_state_cmd',
+            'getCounter = ptp_brcm.main:get_counter_cmd',
             'sonic-clear = clear.main:cli',
             'sonic-installer = sonic_installer.main:sonic_installer',
             'sonic_installer = sonic_installer.main:sonic_installer',  # Deprecated
